@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+</head>
+
+<body>
+<article class="exercice" id="exo6"> <!-- Classification périodique -->
+		<div class="titre">Breaking Bad (ou <q>Classification périodique</q>) </div>
+		<div class="content" style="display: block;">
+			<p>Dans cet exercice nous allons utiliser les propriétés permettant d'agir sur la positions des blocs dans la page pour produire une classification périodique des éléments chimiques comme celle présentée à la figure suivante.</p>
+			<div><figure>
+				<img src="classification.png" alt="exemple de classification périodique (partielle) à obtenir à la fin de l'exercice" width="800">
+				<figcaption>Classification périodique partielle</figcaption>
+			</figure></div>
+			<p>Une version complète peut par exemple être trouvée <a href="http://upload.wikimedia.org/wikipedia/commons/4/4d/Periodic_table_large.svg" title="table périodique des éléments complète" target="_blank">ici</a> ou <a href="http://www.ptable.com/?lang=fr#Writeup/Wikipedia" title="table périodique des éléments complète" target="_blank">ici</a>.</p>
+			<ol class="questions">
+				<li>Nous allons commencer par nous intéresser à la mise en forme des données pour un atome. Les données que nous voulons afficher sont présentées à la figure suivante qui sert également de modèle pour le résultat à obtenir.
+			<div><figure>
+				<img src="details-carbone.png" alt="l'élément carbone et les données à afficher">
+				<figcaption>L'élément Carbone et ses données</figcaption>
+			</figure></div>
+				<p>Le fichier <span class="fichier">hydrogene-carbone.html</span> contient des données pour les atomes <em>hydrogène</em> et <em>carbone</em>. Des classes ont été créées pour structurer et typer ces données. Etudiez cette structure. Vous pouvez constater que les données n'apparaissent pas dans le même ordre pour les deux atomes. Vous les laisserez telles qu'elles, pour autant on voudra obtenir la même présentation pour les deux atomes (voir image précédente).</p>
+				<ol>
+				<li>Fixer une largeur, une hauteur, une couleur d'arrière plan pour les <code>&lt;div&gt;</code> de la classe <var>atome</var>.
+				<p>Vous pouvez utiliser le fichier <span class="fichier">hydrogene-carbone.css</span> qui définit quelques propriétés de base pour les différentes éléments. Nous allons le compléter dans la suite de l'exercice.</p>
+				</li>
+				<li>On souhaite placer le numéro atomique en haut à gauche&nbsp;: à <var>0%</var> du bord haut, et à <var>2%</var> du bord gauche définis par la boîte de l'élément <code>&lt;div&gt;</code> de la classe <var>atome</var> qui le contient. Quelles propriétés faut-il ajouter au sélecteur <code>div.numero</code>&nbsp;? Quelle propriété faut-il modifier pour les <code>div.atome</code>&nbsp;?</li>
+				<li>Procéder de manière similaire pour
+				<ul><li>l'électronégativité&nbsp;: à <var>1%</var> du bord haut et <var>40%</var> du bord gauche,</li>
+				<li>les couche d'électrons&nbsp;: à <var>1%</var> du bord haut et <var>2%</var> du bord droit,</li>
+				<li>la masse atomique&nbsp;:  à <var>1%</var> du bord bas et <var>2%</var> du bord gauche.</li>
+				</ul>
+				</li>
+				<li>Définissez les propriétés qui permettent de décaler  vers le bas  par rapport à leur position actuelle de <var>20%</var> le symbole chimique et de <var>15%</var> le nom de l'élément chimique.</li>
+				<li>Vous devez maintenant avoir obtenu un résultat similaire à l'image précédente et, mis à part l'élément <code>div.nom</code> qui doit se trouver après l'élément <code>div.symbole</code>, vous devez pouvoir changer l'ordre des données au sein du bloc <code>div.atome</code> sans que cela ait un impact sur l'affichage.</li>
+				</ol>
+				</li>
+				
+				<li>Poursuivons avec la construction de la table. Les données sur les 11 premiers atomes se trouvent dans le fichier <span class="fichier">tablePeriodique.html</span>. Ajoutez le contenu de la feuille de style produite à la question précédente au fichier <span class="fichier">style-tablePeriodique.css</span>. Les éléments s'affichent pour le moment les uns en dessous des autres.
+				<ol>
+					<li>Les éléments de classe <var>atome</var> sont pour le moment positionnées les uns en dessous des autres dans les différentes lignes. Quelle propriété permet de changer le comportement des blocs <var>div.atome</var> pour qu'ils s'affichent les uns à côté des autres ?</li>
+					<li>Pour obtenir le placement désiré des éléments, nous allons rendre flottants à gauche et à droite, selon ce qui est désiré, les blocs correspondant aux atomes. 
+					Pour cela, après avoir identifié à quoi correspond l'élément <code>div.bloc</code> dans le document, définissez pour les éléments de cette classe <var>bloc</var> la valeur de propriété <code>float</code> qui convient.
+					</li>
+<!--					<li>Quelle propriété faut-il affecter sur les <code>div.ligne</code> pour que les différents éléments restent sur leurs lignes respectives et ne <q>flottent</q> pas sur les lignes précédentes&#xA0;?</li> -->
+					<!--<li>Que constatez-vous au niveau de l'ordre d'affichage des atomes&#xA0;? Faites les modifications nécessaires pour que l'ordre de la classification soit respecté. </li>-->
+					<li>Finissons avec un peu de cosmétique&nbsp;:
+						<ul>
+							<li>Dans les conditions normales, certains éléments chimiques sont naturellement solides (<i>Li</i>, <i>Be</i>, <i>B</i>, <i>C</i> et <i>NA</i> pour ceux qui nous concernent), d'autres des gaz (les autres). Attribuez une couleur particulière aux symboles des gaz et une autre aux symboles des solides (il faut définir des classes et les attribuer dans le code html).</li>
+							<li>Dans les éléments chimiques on identifie plusieurs types&nbsp;:
+								<ul>
+								<li>les <em>non-métaux</em>&nbsp;: <i>H</i>, <i>C</i>, <i>N</i>,<i>O</i>,</li>
+								<li>les métaux <em>alcalins</em>&nbsp;: <i>Li</i>, <i>Na</i>,</li>
+								<li>les métaux <em>alcalino-terreux</em>&nbsp;: <i>Be</i>, </li>
+								<li>les <em>métalloïdes</em>&nbsp;: <i>B</i></li>
+								<li>les <em>halogènes</em>&nbsp;: <i>F</i>,</li>
+								<li>les <em>gaz rares</em>&nbsp;: <i>He</i> et <i>Ne</i>.</li>
+								</ul>
+							Il est d'usage de représenter dans la table périodique ces types par différentes couleurs. Définissez des couleurs de fond que vous associerez aux éléments chimiques selon leur type. 
+							</li>
+							<li> Définissez une règle CSS telles que le nombre d'électrons de la première couche soit de couleur <var>rgb(128,0,0)</var>, celui de la seconde couche <var>rgb(64,0,0)</var> et celui de la troisième couche <var>rgb(32,0,0)</var>.
+								<p>	Vous pouvez aussi décaler ces nombres vers le haut de <var>2px</var> pour le premier, <var>4px</var> pour le second et <var>6px</var>. </p>
+							</li>
+						</ul>
+					</li>
+				</ol>
+				</li>
+			</ol>
+		</div>
+	</article>	
+</body>
+</html>
