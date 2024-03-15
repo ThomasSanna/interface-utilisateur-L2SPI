@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <title>Affichage des caractéristiques élément par le DOM niveau 2.0</title>
+  <script type="text/javascript">
+    window.onload = function () {
+    nd = document.getElementById('ma_div');
+    var res = '';
+    var all_attr = nd.attributes;
+    for (var i=0; i != all_attr.length; i++) {
+      var at = all_attr[i];
+      res += 'ATTR '+at.nodeName+' = "'+at.nodeValue+'"\n';
+    }
+ 
+    var all_nodes = nd.childNodes;
+    for (var i=0; i != all_nodes.length; i++) {
+      var el = all_nodes[i];
+      res += el.nodeName;
+      if (el.nodeType==3){
+	      res += ' = "'+el.nodeValue+'"\n';
+      }else{
+	      res += " --\n";
+      }
+    }
+ 
+    resnode = document.createElement('div');
+    body = document.getElementsByTagName('body')[0];
+    body.appendChild(resnode);
+ 
+    titlenode = document.createElement('h2');
+    titlenode.appendChild(document.createTextNode('Ceci et le contenu de la div'));
+    contentnode = document.createElement('pre');
+    contentnode.appendChild(document.createTextNode(res));
+ 
+    resnode.appendChild(titlenode);
+    resnode.appendChild(contentnode);
+  }
+  </script>
+</head>
+<body>
+ 
+ <h1>Affichage des caractéristiques des éléments par le DOM niveau 2.0.</h1>
+ <div class="ma_classe" id="ma_div">
+    Bonjour à <strong>toutes</strong> et à <strong>tous</strong>.
+ </div>
+ 
+ <p><a href="http://validator.w3.org/check?uri=referer">page xHTML valide !</a></p>
+</body>
+</html>
