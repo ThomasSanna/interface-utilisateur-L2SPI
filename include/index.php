@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<?php include '/var/www/html/SANNA_THOMAS/include/connect_bdd.php'; ?>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class. Périodique</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container-table">
     <div class="ligne">
       <div class="atomes-gauche">
-        <div class="atome lb">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 1');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">1</div>
           <div class="masse">1.008</div>
           <div class="electroneg">2.1</div>
@@ -24,7 +31,11 @@
         </div>
       </div>
       <div class="atomes-droite">
-        <div class="atome db">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 2');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">2</div>
           <div class="masse">4.002</div>
           <div class="electroneg"></div>
@@ -42,7 +53,11 @@
 
     <div class="ligne">
       <div class="atomes-gauche">
-        <div class="atome ly">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 3');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">3</div>
           <div class="masse">6.432</div>
           <div class="electroneg">0.98</div>
@@ -55,7 +70,11 @@
             <div class="nom">Lithium</div>
           </div>
         </div>
-        <div class="atome dy">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 4');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">4</div>
           <div class="masse">9.025</div>
           <div class="electroneg">1.55</div>
@@ -70,7 +89,11 @@
         </div>
       </div>
       <div class="atomes-droite">
-        <div class="atome lrose">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 5');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">5</div>
           <div class="masse">10.22</div>
           <div class="electroneg">2.05</div>
@@ -83,8 +106,12 @@
             <div class="nom">Bore</div>
           </div>
         </div>
-        
-        <div class="atome lb">
+
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 6');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">6</div>
           <div class="masse">12.002</div>
           <div class="electroneg">2.5</div>
@@ -97,8 +124,12 @@
             <div class="nom">Carbone</div>
           </div>
         </div>
-        
-        <div class="atome lb">
+
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 7');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">7</div>
           <div class="masse">14.007</div>
           <div class="electroneg">3.05</div>
@@ -112,7 +143,11 @@
           </div>
         </div>
 
-        <div class="atome lb">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 8');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">8</div>
           <div class="masse">15.995</div>
           <div class="electroneg">3.44</div>
@@ -126,7 +161,11 @@
           </div>
         </div>
 
-        <div class="atome lr">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 9');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">9</div>
           <div class="masse">18.215</div>
           <div class="electroneg">3.98</div>
@@ -140,7 +179,11 @@
           </div>
         </div>
 
-        <div class="atome db">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 10');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">10</div>
           <div class="masse">20.1788</div>
           <div class="electroneg"></div>
@@ -149,7 +192,7 @@
             <div class="couche">8</div>
           </div>
           <div class="centre">
-            <div class="symbole">N</div>
+            <div class="symbole">Ne</div>
             <div class="nom">Neon</div>
           </div>
         </div>
@@ -158,7 +201,11 @@
 
     <div class="ligne">
       <div class="atomes-gauche">
-        <div class="atome ly">
+        <?php
+        $query = $pdo->query('SELECT couleur FROM classification_periodique WHERE numero = 11');
+        $couleur = $query->fetch();
+        ?>
+        <div class="atome" style="background-color: <?php echo $couleur['couleur']; ?>">
           <div class="numero">11</div>
           <div class="masse">22.989</div>
           <div class="electroneg">0.93</div>
@@ -181,4 +228,5 @@
 
   </div>
 </body>
+
 </html>

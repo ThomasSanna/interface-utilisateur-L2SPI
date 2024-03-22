@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 /* container */
 
-.container-table{
+.container-table {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -16,20 +16,20 @@
   border: 1px solid black;
 }
 
-.ligne{
+.ligne {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 5px;
 }
 
-.ligne > *{
+.ligne > * {
   display: flex;
 }
 
 /* atomes */
 
-.atome{
+.atome {
   margin: 2px;
   width: 100px;
   height: 130px;
@@ -43,7 +43,7 @@
   box-shadow: 2px 1px 0px 0px black;
 }
 
-.atome .numero{
+.atome .numero {
   font-size: 20px;
   font-weight: 800;
   position: absolute;
@@ -51,20 +51,20 @@
   left: 5px;
 }
 
-.masse{
+.masse {
   font-size: 12px;
   position: absolute;
   bottom: 5px;
   left: 5px;
 }
 
-.electroneg{
+.electroneg {
   font-size: 15px;
   position: absolute;
   top: 5px;
 }
 
-.couches{
+.couches {
   font-size: 12px;
   position: absolute;
   top: 5px;
@@ -75,54 +75,52 @@
   align-items: center;
 }
 
-.centre{
+.centre {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.centre .nom{
+.centre .nom {
   font-size: 16px;
   margin-bottom: 5px;
   font-style: italic;
 }
 
-.centre .symbole{
+.centre .symbole {
   font-size: 40px;
   font-weight: 800;
 }
 
-
-
-/* couleurs */
+/* couleurs
 
 /* bleu clair */
-.lb{
+/* .lb{
   background-color: #caf2ff;
-}
+} */
 
 /* bleu foncé */
-.db{
+/* .db{
   background-color: #b4b4e5;
-}
+} */
 
 /* jaune clair */
-.ly{
+/* .ly{
   background-color: #fffaa0;
-}
+} */
 
 /* jaune foncé */
-.dy{
-  background-color: #dada9f;
-}
+/* .dy{
+  background-color: #eeee65;
+} */
 
 /* rouge clair */
-.lr{
+/* .lr{
   background-color: #ff9a9a;
-}
+} */
 
 /* rose clair */
-.lrose{
+/* .lrose{
   background-color: #ff9aff;
-}
+} */
